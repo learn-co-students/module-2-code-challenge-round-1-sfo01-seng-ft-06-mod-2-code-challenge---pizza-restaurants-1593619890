@@ -1,0 +1,20 @@
+<h3><%= @restaurant.name%></h3>
+<h3><%=@restaurant.address%></h3>
+<br><br>
+
+<h4>Pizzas:</h4>
+<%@restaurant.pizzas.each do |pizza|%>
+<ul>
+<li><%=link_to pizza.name, pizza_path(@restaurant.pizza)%>
+</li>
+</ul>
+<%end%>
+
+
+<%# DONT KNOW WHY THIS DOESNT WORK T^T %>
+<%# There should be a show page for each Restaurant. It should include:
+
+- the Restaurant's name and address
+- a list of the Pizzas it sells
+
+Each pizza in the list should link to that Pizza's show page. %>
