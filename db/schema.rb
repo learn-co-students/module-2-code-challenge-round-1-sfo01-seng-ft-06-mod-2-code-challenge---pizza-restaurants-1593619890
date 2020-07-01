@@ -24,4 +24,9 @@ ActiveRecord::Schema.define(version: 20181129144046) do
     t.string "address"
   end
 
+  create_table "restaurants_pizzas", force: :cascade do |t|
+    t.integer "restaurant_id"
+    t.integer "pizza_id"
+  end
+
 end
