@@ -1,0 +1,14 @@
+<h1>Restaurants</h1>
+
+
+<div> 
+<%= @restaurant.name %><br>
+<%= @restaurant.address %>
+</div>
+
+
+<ul>
+<% @restaurant.restaurants_pizzas each do |restaurant_pizza| %>
+    <li> <%= link_to restaurant_pizza.pizza.name, pizza_path(restaurant_pizza.pizza) %></li>
+    <% end %>
+</ul>
